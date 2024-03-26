@@ -1,0 +1,516 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-weight: 400;
+  line-height: 1.7;
+  color: grey;
+  margin: 30px;
+  font-family: "lato", sans-serif;
+}
+header {
+  background-image: linear-gradient(to right, #7ed56f41, #28b48563),
+    url("./assets/images");
+  /* background-image: linear-gradient(330deg, black),
+url(WhatsApp\ Image\ 2023-05-20\ at\ 21.17.25.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 95vh;
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 0% 100%);
+}
+
+/* #7ed56f */
+/* #55c57a  */
+
+.logo_box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.logo {
+  height: 3.5rem;
+}
+
+.heading_primary_main {
+  color: white;
+  font-weight: 400;
+  font-size: 6rem;
+  letter-spacing: 35px;
+  animation: moveinleft 2s linear;
+}
+.heading_primary_sub {
+  color: white;
+  font-size: 1.8rem;
+  /* font-weight: 700; */
+  letter-spacing: 14px;
+  text-transform: uppercase;
+  animation: moveinright 2s linear;
+}
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 100px;
+  display: inline-block;
+}
+.btn_white {
+  position: relative;
+  background-color: white;
+  color: grey;
+  padding: 15px 40px;
+  font-size: 1.7rem;
+  margin-top: 20px;
+}
+
+.text_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+}
+
+@keyframes moveinleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes moveinright {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes moveintop {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  80% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  border-radius: 100px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.btn:hover::after {
+  transform: scale(2);
+  background-color: white;
+  opacity: 0;
+}
+/******************************************************** section___about  *********************/
+
+.section-about {
+  background-color: rgb(238, 237, 237);
+  padding: 25rem 0;
+  margin-top: -25vh;
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: linear-gradient(to right, #7ed56f, #28b485);
+  display: inline-block;
+  /* this method works otherwise in other order this is not working  */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.2s;
+  letter-spacing: 2px;
+  animation: moveinleft 2s linear;
+}
+.heading-secondary:hover {
+  transform: skewY(2deg) skewX(15deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.5);
+}
+/* utility property  */
+.utility-center-text {
+  text-align: center;
+  margin: 2rem 0;
+}
+/* utility property  */
+.u-margin-bottom-big {
+  margin-bottom: 8rem;
+}
+.u-margin-bottom-md {
+  margin-bottom: 4rem;
+}
+.u-margin-bottom-sm {
+  margin-bottom: 2rem;
+}
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0.5rem;
+  animation: moveinleft 2s linear;
+}
+.paragraph {
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+  animation: moveintop 2s linear;
+}
+/* utility propertu  */
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+/* utility propertu  */
+.u-grid-ususal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+.button {
+  color: green;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid green;
+  padding: 6px;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+  transition: all 0.5s;
+}
+.button:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  background-color: green;
+  color: white;
+  transform: translateY(-3px);
+}
+
+.button:active {
+  transform: translateY(0px);
+  background-color: rgb(173, 13, 13);
+}
+.composition {
+  position: relative;
+  animation: moveinright 2s linear;
+}
+
+.composition__photo {
+  width: 55%;
+  box-shadow: 0 0.5rem 4rem rgba(0, 0, 0, 0.1);
+  /* border-radius: 5px; */
+  position: absolute;
+  z-index: 10;
+  transition: all 0.2s;
+  /* to make space between the border and the content  */
+  outline-offset: 2rem;
+}
+.photo-1 {
+  left: 0;
+  top: -2rem;
+}
+.photo-2 {
+  right: 0;
+  top: 2rem;
+}
+.photo-3 {
+  left: 20%;
+  top: 10rem;
+}
+
+.composition__photo:hover {
+  /* why we are using outline because of outline offset  */
+  outline: 1.5rem solid green;
+  transform: scale(1.1);
+  box-shadow: 0 0.5rem 4rem rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+
+.composition:hover .composition__photo:not(:hover) {
+  transform: scale(0.5);
+}
+
+.globe {
+  color: white;
+  width: 20%;
+  color: rgb(79, 141, 79);
+  margin: 0.5rem;
+  display: inline-block;
+}
+/********************************* section features  ****************************************/
+
+.section_features {
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      330deg,
+      rgba(126, 213, 111, 0.817),
+      rgba(40, 180, 133, 0.779)
+    ),
+    url("./assets/images/nat-4.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: -20rem;
+  transform: skewY(-7deg);
+}
+.section_features > * {
+  transform: skewY(7deg);
+}
+.grid-4-col {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.col-of-4 {
+  animation: moveintop 2s linear;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
+  /* to make animation efect  */
+  /* transform: skewY(7deg); */
+}
+
+.col-of-4:hover {
+  transform: translateY(-30px);
+  background-color: #28b485;
+}
+
+/************************************************ section tours  */
+
+.grid-3-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+.section_tours {
+  margin-top: -5rem;
+  padding: 25rem 0 10rem;
+}
+
+.card {
+  position: relative;
+}
+
+.card-side {
+  height: 50rem;
+  transition: all 0.8s;
+  position: absolute;
+  font-size: 2rem;
+  top: 0;
+  left: 0;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  width: 100%;
+  /* for removing to face div when it rotates then only one shows  */
+  backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+.back-1 {
+  background-color: rgb(255, 183, 0);
+}
+.back-2 {
+  background-color: rgb(0, 255, 51);
+}
+.back-3 {
+  background-color: rgb(0, 195, 255);
+}
+.card:hover .card-front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card-back {
+  transform: rotateY(0);
+}
+
+.card-picture {
+  height: 23rem;
+  background-size: cover;
+}
+.card-picture-1 {
+  background-image: linear-gradient(to right bottom, #ffaa00, #ff770000),
+    url("./assets/images/nat-5.jpg");
+}
+
+.card-picture-2 {
+  background-image: linear-gradient(to right bottom, #5eff00c9, #0dff0000),
+    url("./assets/images/nat-6.jpg");
+}
+.card-picture-3 {
+  background-image: linear-gradient(to right bottom, #0026ff2a, #3078ff2c),
+    url("./assets/images/nat-7.jpg");
+}
+.card-heading {
+  position: absolute;
+  top: 12rem;
+  right: 2rem;
+  color: white;
+  font-size: 2.8rem;
+  font-weight: 100;
+  width: 64%;
+
+  text-align: right;
+}
+.card-heading-span1 {
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  background-image: linear-gradient(to right bottom, #ffbb00d4, #ff7700),
+    url("./assets/images/nat-5.jpg");
+
+  /* -webkit-box-decoration-break: clone;
+  box-decoration-break: clone; */
+}
+.card-heading-span2 {
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  background-image: linear-gradient(to right bottom, #6aff00bc, #00ff08),
+    url("./assets/images/nat-5.jpg");
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.card-heading-span3 {
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  background-image: linear-gradient(to right bottom, #00aeffd4, #005eff),
+    url(./assets/images/nat-5.jpg);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.card-details ul {
+  width: 80%;
+  list-style-type: none;
+  margin: auto;
+  padding: 3rem;
+}
+.card-details ul li {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-bottom: 1px solid rgb(202, 202, 202);
+}
+.card-back {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-bac .card-price {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.card-price-value {
+  font-size: 6rem;
+  font-weight: 100;
+  padding-left: 1rem;
+  text-transform: uppercase;
+}
+/**************************************** section sotries  */
+.section-stories {
+  margin-top: 50rem;
+  background-color: rgb(246, 246, 246);
+  padding: 15rem 0;
+  position: relative;
+}
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.181);
+  background-color: white;
+  border-radius: 3px;
+  padding: 8rem;
+  font-size: 1.8rem;
+  transform: skew(-12deg);
+}
+.story-shape {
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+  float: left;
+  clip-path: circle(50% at 50% 50%);
+  transform: skew(12deg) translateX(-3rem);
+}
+.story-text {
+  transform: skew(12deg);
+}
+.story-image {
+  height: 100%;
+  transition: 0.5s;
+  transform: scale(1.4) skew(12deg);
+}
+.story-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* for exactly center  */
+  /* transform: translate(-50%, -50%); */
+  transform: translate(-50%, 20%);
+  color: white;
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+  transition: all 0.5s;
+  opacity: 0;
+}
+.story:hover .story-caption {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+.story:hover .story-image {
+  transform: scale(1) skew(12deg);
+  filter: blur(3px) brightness(80%);
+}
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* object-fit: cover; */
+}
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+  /* asim  */
+}
